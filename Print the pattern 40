@@ -1,0 +1,80 @@
+Print the pattern
+
+Input Format
+
+Read no of rows
+
+Constraints
+
+1<=n<=10^7
+
+Output Format
+
+print pattern
+
+Sample Input 0
+
+5
+Sample Output 0
+
+*****
+ ****
+  ***
+   **
+    *
+Sample Input 1
+
+10
+Sample Output 1
+
+**********
+ *********
+  ********
+   *******
+    ******
+     *****
+      ****
+       ***
+        **
+         *
+Sample Input 2
+
+13
+Sample Output 2
+
+*************
+ ************
+  ***********
+   **********
+    *********
+     ********
+      *******
+       ******
+        *****
+         ****
+          ***
+           **
+            *
+
+Program:
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int rows, i, j;
+    scanf("%d", &rows);
+
+    for (i = 0; i < rows; i++) {
+        for (j = 0; j < i; j++) {
+            printf(" ");
+        }
+        for (j = 0; j < rows - i; j++) {
+            printf("*");
+        }
+        printf("\n");
+    }   
+    return 0;
+}
